@@ -1,15 +1,15 @@
 
 function calcWeightedGrade(items) {
-    if (!Array.isArray(items)){
-        throw new TypeError('los items deben ser un arreglo')
+    if (!Array.isArray(items)) {
+        throw new TypeError('los items deben ser un arreglo');
     }
-     
-     if (items.length === 0){
-        throw new RangeError('items no puede estar vacio')
-     }
 
-     let totalWeight = 0;
-     let weightedSum = 0;
+    if (items.length === 0) {
+        throw new RangeError('items no puede estar vacio');
+    }
+
+    let totalWeight = 0;
+    let weightedSum = 0;
 
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
