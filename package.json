@@ -11,7 +11,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "firebase-tools": "^15.5.1"
   },
   "devDependencies": {
     "eslint": "^9.39.2",
