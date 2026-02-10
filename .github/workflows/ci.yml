@@ -1,0 +1,30 @@
+name: CI
+
+on: 
+  push:
+  pull_request:
+    branches: [main]
+
+jobs: 
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with: 
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar ESLint
+        run: npm run lint
+
+      - name: Ejecutar tests
+        run: npm test
+
+      - name: covertura de codigo
+        run: npm run test:coverage
