@@ -39,11 +39,11 @@ function percentile(p, values) {
         return Math.round(sortedValues[sortedValues.length - 1] * 100) / 100;
     }
 
-    // Método nearest-rank: rank = ceil(p/100 × N)
+    // Método nearest-rank
     const N = sortedValues.length;
     const rank = Math.ceil((p / 100) * N);
 
-    // Convertir de indexación 1..N a indexación 0..N-1
+    // Convertir de indexacion 1..N 
     const index = rank - 1;
 
     // Obtener el valor y redondear a 2 decimales
